@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import profilePic from '../public/LewBeavenBar.jpg'
+import { motion } from "framer-motion"
 
 const Navbar = () => {
   return (
@@ -15,9 +16,12 @@ const Navbar = () => {
           <a href="#Contact" className='hover:text-gray-200 hover:text-xl'>Contact</a>
         </ul>
       </div>
-      <button className='h-10 w-44 rounded-3xl bg-indigo-300 mr-10 hover:shadow-md hover:shadow-black'>
+      <motion.button
+        className='h-10 w-44 rounded-3xl bg-indigo-300 mr-10'
+        whileHover={{ scale: 1.1 }}
+        >
         Download CV
-      </button>
+      </motion.button>
     </nav>
   );
 }
