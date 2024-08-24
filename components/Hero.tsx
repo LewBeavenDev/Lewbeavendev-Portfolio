@@ -1,21 +1,41 @@
-import React from 'react'
+import React from 'react';
 import ParticlesComponent from './Particles';
-
-
+import profilePic from '../public/LewBeavenBar.jpg';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <div>
-      <div className='-z-10 absolute w-screen h-screen flex items-center justify-start pl-40' style={{marginTop: -80}}>
+    <div className="relative w-full h-screen flex flex-col-reverse md:flex-row items-center px-10">
+      {/* Background particles */}
+      <div className="absolute inset-0 -z-10">
         <ParticlesComponent />
-        <div className='pt-20 flex flex-col  h-40 w-120 absolute '>
-          <h1 className='text-white font-bold text-9xl'>Lewis Beaven</h1>
-          <p className='pl-2 text-xl font-semibold'>Modern websites made easy</p>
-        </div>
       </div>
-      
-    </div>
-  )
-}
 
-export default Hero
+      {/* Text Content */}
+      <div className="flex flex-col justify-center space-y-5 z-10 text-center md:text-left">
+        <h1 className="text-white font-bold text-5xl md:text-7xl lg:text-9xl">Lewis Beaven.</h1>
+        <h2 className="text-xl md:text-2xl font-semibold text-white">
+          Creative Junior Front End Developer Turning Ideas into Code.
+        </h2>
+        <p className="text-slate-300 font-medium text-lg lg:w-2/3 md:text-xl">
+          With a unique background in engineering and hospitality, I blend creativity with technical
+          skills to build functional and engaging web applications.
+        </p>
+      </div>
+
+      {/* Profile Picture */}
+      <div className="z-10 flex justify-center mb-10 md:mb-0">
+        <Image
+          src={profilePic}
+          alt="Lewis Beaven Profile Picture"
+          className="rounded-full"
+          width={288} // Fixed width for medium and larger devices (72px * 4)
+          height={288} // Fixed height to maintain aspect ratio
+          priority // Optional: For better loading on the hero section
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Hero;

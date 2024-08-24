@@ -1,7 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
-import profilePic from '../public/LewBeavenBar.jpg'
-import { motion } from "framer-motion"
+import React, { useState } from 'react';
+import Image from 'next/image';
+import profilePic from '../public/LewBeavenBar.jpg';
+import { motion } from "framer-motion";
 
 const bounceAnimProps = () => ({
   whileHover: { scale: 1.1 },
@@ -9,37 +9,57 @@ const bounceAnimProps = () => ({
 });
 
 const Navbar = () => {
-  return (
-    <nav className='w-screen h-20 bg-indigo-700 flex justify-between items-center'>
-      <div className='flex items-center'>
-        <div className='bg-slate-500 rounded-full border-4 border-indigo-300 flex items-center justify-center ml-10'>
-          <Image src={profilePic} alt='Author Picture' className='h-10 w-10 rounded-full'/>
-        </div>
-        <ul className='flex justify-start gap-10 items-center pl-10'>
-          <motion.div {...bounceAnimProps()}>
-            <a href="#About">About</a>
-          </motion.div>
-          <motion.div {...bounceAnimProps()}>
-            <a href="#Projects">Projects</a>
-          </motion.div>
-          <motion.div {...bounceAnimProps()}>
-            <a href="#Skills">Skills</a>
-          </motion.div>
-          <motion.div {...bounceAnimProps()}>
-            <a href="#Contact">Contact</a>
-          </motion.div>
+  // State to handle mobile menu toggle
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-        </ul>
+  // Function to toggle the mobile menu
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  return (
+    <nav className='w-screen h-20 bg-indigo-700 flex justify-between items-center px-4 md:px-10'>
+      {/* Profile Picture */}
+      <div className='flex items-center'>
+        <div className='bg-slate-500 rounded-full border-4 border-indigo-300 flex items-center justify-center'>
+          <Image src={profilePic} alt='Author Picture' className='h-10 w-10 rounded-full' />
+        </div>
       </div>
+
+      {/* Navigation Links */}
+      <ul className={`fixed top-20 right-0 w-full bg-indigo-700 flex flex-col items-center gap-6 py-4 text-white transition-transform duration-300 md:static md:flex md:flex-row md:w-auto md:py-0 md:bg-transparent md:text-white md:gap-6 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:translate-x-0`}>
+        <motion.div {...bounceAnimProps()}>
+          <a href="#About" onClick={toggleMobileMenu}>About</a>
+        </motion.div>
+        <motion.div {...bounceAnimProps()}>
+          <a href="#Projects" onClick={toggleMobileMenu}>Projects</a>
+        </motion.div>
+        <motion.div {...bounceAnimProps()}>
+          <a href="#Skills" onClick={toggleMobileMenu}>Skills</a>
+        </motion.div>
+        <motion.div {...bounceAnimProps()}>
+          <a href="#Contact" onClick={toggleMobileMenu}>Contact</a>
+        </motion.div>
+      </ul>
+
+      {/* Download Button */}
       <motion.button
-        className='h-10 w-44 rounded-3xl bg-indigo-300 mr-10'
+        className='hidden md:block h-10 w-36 rounded-3xl bg-indigo-300 text-indigo-700 font-semibold'
         {...bounceAnimProps()}
-        >
+      >
         Download CV
       </motion.button>
+
+      {/* Mobile Menu Toggle Button */}
+      <div className='flex md:hidden'>
+        <button className='text-white' onClick={toggleMobileMenu}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
     </nav>
   );
-}
+};
 
-
-export default Navbar
+export default Navbar;
