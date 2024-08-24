@@ -29,11 +29,12 @@ const Hero = () => {
           src={profilePic}
           alt="Lewis Beaven Profile Picture"
           className="rounded-full"
-          width={288} // Fixed width for medium and larger devices (72px * 4)
-          height={288} // Fixed height to maintain aspect ratio
-          priority // Optional: For better loading on the hero section
+          width={288}
+          height={288}
+          priority
         />
       </div>
+      <div></div>
     </div>
   );
 };

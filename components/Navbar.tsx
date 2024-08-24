@@ -9,24 +9,20 @@ const bounceAnimProps = () => ({
 });
 
 const Navbar = () => {
-  // State to handle mobile menu toggle
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Function to toggle the mobile menu
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <nav className='w-screen h-20 bg-indigo-700 flex justify-between items-center px-4 md:px-10'>
-      {/* Profile Picture */}
+    <nav className='w-full h-20 bg-indigo-700 fixed top-0 left-0 z-50 flex justify-between items-center px-4 md:px-10'>
       <div className='flex items-center'>
         <div className='bg-slate-500 rounded-full border-4 border-indigo-300 flex items-center justify-center'>
           <Image src={profilePic} alt='Author Picture' className='h-10 w-10 rounded-full' />
         </div>
       </div>
 
-      {/* Navigation Links */}
       <ul className={`fixed top-20 right-0 w-full bg-indigo-700 flex flex-col items-center gap-6 py-4 text-white transition-transform duration-300 md:static md:flex md:flex-row md:w-auto md:py-0 md:bg-transparent md:text-white md:gap-6 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:translate-x-0`}>
         <motion.div {...bounceAnimProps()}>
           <a href="#About" onClick={toggleMobileMenu}>About</a>
@@ -42,7 +38,6 @@ const Navbar = () => {
         </motion.div>
       </ul>
 
-      {/* Download Button */}
       <motion.button
         className='hidden md:block h-10 w-36 rounded-3xl bg-indigo-300 text-indigo-700 font-semibold'
         {...bounceAnimProps()}
@@ -50,7 +45,6 @@ const Navbar = () => {
         Download CV
       </motion.button>
 
-      {/* Mobile Menu Toggle Button */}
       <div className='flex md:hidden'>
         <button className='text-white' onClick={toggleMobileMenu}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
