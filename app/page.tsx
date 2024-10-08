@@ -6,18 +6,19 @@ import Navbar from "@/components/Navbar";
 
 
 export default function Home() {
-  return (
-    <main>
+  return ( 
+    <main className="scroll-smooth">
       <nav className="nav sticky top-0 z-50">
         <Navbar />
       </nav>
-      <div className="">
+      <div id="hero">
         <Hero />
       </div>
-      <div>
+      <div id="about"> 
         <About />
       </div>
     </main>
+    
   );
 }
 
