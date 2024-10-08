@@ -9,9 +9,10 @@ export default function Home() {
       <nav className="nav sticky top-0 z-50">
         <Navbar />
       </nav>
-      <div>
+      <div className="">
         <Hero />
       </div>
     </main>
   );
 }
+

@@ -15,7 +15,7 @@ const Hero = () => {
       </div>
 
       {/* Text Content */}
-      <div className="flex flex-col justify-center pl-32 space-y-5 z-10 text-center md:text-left">
+      <div className="flex flex-col justify-center ml-0 space-y-5 z-10 text-center lg:ml-32 md:text-left md:ml-0 sm:text-center sm:ml-0">
         {nameText.map((el, i) => (
           <motion.span
             initial={{ opacity: 0 }}
@@ -39,7 +39,7 @@ const Hero = () => {
           initial={{ opacity: 0, y:50 }}
           animate={{ opacity: 1, y:0 }}
           transition={{ duration: 1, delay:1.5, type: 'spring', stiffness: 300 }}
-          className="text-slate-300 font-medium text-lg lg:w-2/3 md:text-xl">
+          className="text-slate-300 font-medium text-md lg:w-2/3 md:text-xl">
           With a unique background in engineering and hospitality, I blend creativity with technical
           skills to build functional and engaging web applications.
         </motion.p>
@@ -59,7 +59,7 @@ const Hero = () => {
             restDelta: 0.001
           }
       }}
-        className="z-10 flex justify-center mb-10 md:mb-0">
+        className="z-10 flex justify-center mb-10 md:mb-0 shrink-0">
         <Image
           src={profilePic}
           alt="Lewis Beaven Profile Picture"
