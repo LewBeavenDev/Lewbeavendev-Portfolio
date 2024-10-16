@@ -40,6 +40,14 @@ const Projects = () => {
                   SkateShack Live Link
                 </Link>
               </p>
+              <p className="mt-2">
+                <Link
+                  href="https://github.com/LewBeavenDev/SkateShack2.0"
+                  target="_blank"
+                >
+                  SkateShack Github Link
+                </Link>
+              </p>
             </div>
           </div>
         </div>
@@ -69,6 +77,14 @@ const Projects = () => {
                   Higher or Lower Live Link
                 </Link>
               </p>
+              <p className="mt-2">
+                <Link
+                  href="https://github.com/LewBeavenDev/Higher_or_Lower"
+                  target="_blank"
+                >
+                  Higher or Lower Github Link
+                </Link>
+              </p>
             </div>
           </div>
         </div>
@@ -94,10 +110,18 @@ const Projects = () => {
               </p>
               <p className="mt-2">
                 <Link
-                  href="https://lewbeavendev.github.io/Higher_or_Lower/"
+                  href="https://cocktailcompanion.onrender.com/"
                   target="_blank"
                 >
                   Cocktail Companion Live Link
+                </Link>
+              </p>
+              <p className="mt-2">
+                <Link
+                  href="https://github.com/LewBeavenDev/CocktailCompanion"
+                  target="_blank"
+                >
+                  Cocktail Companion Github Link
                 </Link>
               </p>
             </div>
