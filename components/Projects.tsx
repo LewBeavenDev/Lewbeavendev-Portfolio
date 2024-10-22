@@ -33,6 +33,9 @@ const Projects = () => {
                 event schedules, location, cafe offerings and bookable sessions.
               </p>
               <p className="mt-2">
+                Tech Stack Used: HTML, CSS
+              </p>
+              <p className="mt-2">
                 <Link
                   href="https://lewbeavendev.github.io/SkateShack2.0/"
                   target="_blank"
@@ -68,6 +71,9 @@ const Projects = () => {
                 Higher or Lower is a card game where you guess whether the next
                 card is higher or loer than the one you are shown. The player
                 can bet points to try and get the highest score possible.
+              </p>
+              <p className="mt-2">
+                Tech Stack Used: HTML, CSS, JavaScript
               </p>
               <p className="mt-2">
                 <Link
@@ -107,6 +113,9 @@ const Projects = () => {
                 cocktails with images and specs. Upon signing up and loging in
                 it allows the users to create, read, update and delete their own
                 cocktails.
+              </p>
+              <p className="mt-2">
+                Tech Stack Used: HTML, CSS, Materialize, JavaScript, SQL, PostgreSQL, Flask
               </p>
               <p className="mt-2">
                 <Link

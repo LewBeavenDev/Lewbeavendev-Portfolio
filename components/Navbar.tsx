@@ -31,13 +31,10 @@ const Navbar = () => {
           <Link to="about" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMobileMenu}>About</Link>
         </motion.div>
         <motion.div {...bounceAnimProps()}>
-          <a href="#Projects" onClick={toggleMobileMenu}>Projects</a>
+          <Link to="projects" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMobileMenu}>Projects</Link>
         </motion.div>
         <motion.div {...bounceAnimProps()}>
-          <a href="#Skills" onClick={toggleMobileMenu}>Skills</a>
-        </motion.div>
-        <motion.div {...bounceAnimProps()}>
-          <a href="#Contact" onClick={toggleMobileMenu}>Contact</a>
+        <Link to="contact" smooth={true} duration={500} className="cursor-pointer" onClick={toggleMobileMenu}>Contact</Link>
         </motion.div>
       </ul>
 
