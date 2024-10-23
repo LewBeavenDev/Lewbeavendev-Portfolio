@@ -33,7 +33,7 @@ const Hero = () => {
           animate={{ opacity: 1, y:0 }}
           transition={{ duration: 1, delay:1, type: 'spring', stiffness: 300 }}
           className="text-xl md:text-2xl font-semibold text-white">
-          Creative Junior Front End Developer Turning Ideas into Code.
+          Creative Junior Full Stack Web Developer Turning Ideas into Code.
         </motion.h2>
         <motion.p 
           initial={{ opacity: 0, y:50 }}

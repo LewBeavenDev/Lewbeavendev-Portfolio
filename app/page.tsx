@@ -10,6 +10,7 @@ import Contact from "@/components/Contact";
 export default function Home() {
   return ( 
     <main className="scroll-smooth">
+      <title>Lewis Beaven</title>
       <nav className="nav sticky top-0 z-50">
         <Navbar />
       </nav>
